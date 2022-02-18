@@ -30,7 +30,7 @@ if __name__ == "__main__":
     if not os.path.exists(directory):
         os.makedirs(directory)
     
-    filelist = tools_mesh_splitter.detect_and_split_mesh(filename,directory)
+    filelist = tools_mesh_splitter.detect_and_split_mesh(filename)
 
     i = 0
     while i < filelist[-1]:
