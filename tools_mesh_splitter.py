@@ -28,7 +28,7 @@ def detect_and_split_mesh(filename):
                 fo.write(newobj)
                 fo.close()
                 newobj = "# XMU music robot\n"
-                centroid.append([round(x/(v - last_v),5), round(y/(v - last_v),5), round(z/(v - last_v),5)])
+                centroid.append([round(x/(v - last_v),5), round(z/(v - last_v),5), round(y/(v - last_v),5)])
                 x = 0
                 y = 0
                 z = 0
@@ -96,7 +96,7 @@ def detect_and_split_mesh(filename):
     #fo = open(directory + '/' + objectname + '.obj', 'w',encoding='utf8')
     fo = open(objectname + '.obj','w',encoding='utf8')
     filelist.append(objectname)
-    centroid.append([round(x/(v - last_v),5), round(y/(v - last_v),5), round(z/(v - last_v),5)])
+    centroid.append([round(x/(v - last_v),5), round(z/(v - last_v),5), round(y/(v - last_v),5)])
     fo.write(newobj)
     fo.close()
     filelist.append(centroid)

@@ -1,4 +1,4 @@
-def generate_model_sdf(directory, object_name, center_of_mass, inertia_tensor, mass, links, model_stl_path, scale_factor):
+def generate_model_sdf(directory, object_name, center_of_mass, centroids, inertia_tensor, mass, links, model_stl_path, scale_factor):
 
     # http://sdformat.org/spec?ver=1.6&elem=visual
 
@@ -52,7 +52,7 @@ def generate_model_sdf(directory, object_name, center_of_mass, inertia_tensor, m
                     </frame> \n \n \
                     <!-- red green blue offsets: model pivot point --> \n \
                     <!-- 32 is just half of the voxelgrid dimension (64)--> \n \
-                    <pose name="link_frame">-32 -32 -32 0 -0 0</pose> \n \n \
+                    <pose name="link_frame"> ' + str(centroids[i][0])+ ' ' + str(centroids[i][1]) + ' ' + str(centroids[i][2]) + ' 0 -0 0</pose> \n \n \
                     <inertial> \n \
                         <mass>' + str(round(mass[i], 2)) + '</mass> \n \
                         <inertia> \n \

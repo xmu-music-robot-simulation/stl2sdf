@@ -86,6 +86,7 @@ if __name__ == "__main__":
         directory=directory,
         object_name=object_model_name,
         center_of_mass=center_of_mass,
+        centroids=filelist[-2],
         inertia_tensor=moments_of_inertia,
         mass=mass,
         links=filelist[-1],
